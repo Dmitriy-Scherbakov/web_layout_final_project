@@ -1,0 +1,147 @@
+/* elements */
+.link-type-1:active {
+  color: #4F28A5;
+}
+
+.social-link:active path {
+  fill: #4F28A5;
+}
+
+.btn-type-1:active {
+  border-color: #4f28a5;
+  color: #fff;
+  background-color: #4f28a5;
+}
+
+.btn-type-1:active path {
+  stroke: #fff;
+}
+
+.btn-type-2:active {
+  background-color: #4F28A5;
+  border-color: #4F28A5;
+}
+
+.header-btn-play:active path {
+  fill: #4F28A5;
+}
+
+/* header */
+.search-btn:active path {
+  stroke: #4F28A5;
+}
+
+/* podcasts */
+.podcasts-item__btn-play:active {
+  border-color: #4F28A5;
+  background-color: #4F28A5;
+}
+
+.podcasts-item__btn-play:active .podcasts-btn-play__svg-filler {
+  fill: #fff;
+}
+
+.podcasts-btn:active path {
+  fill: #4F28A5;
+  stroke: #4F28A5;
+}
+
+.podcasts-btn:active .podcasts-btn__text {
+  color: #4F28A5;
+}
+
+.podcasts__btn-more:active {
+  border-color: #4F28A5;
+  background-color: #4F28A5;
+  color: #fff;
+}
+
+/* broadcasts */
+.broadcasts-item__link:active {
+  color: #4F28A5;
+}
+
+.broadcasts-item__link:active path {
+  fill: #4F28A5;
+}
+
+.choices__inner:hover {
+  background-color: #F5F6F7;
+  border-color: #F5F6F7;
+}
+
+.is-open .choices__inner {
+  background-color: #D2D5DD;
+}
+
+/* guests */
+.accordion-item__btn:active .accordion-item__btn-svg {
+  fill: #AA9DFA;
+}
+
+.accordion-item__btn:active path {
+  stroke: #fff;
+}
+
+.accordion-item__item-btn:active {
+  color: #4F28A5;
+}
+
+.guests-person__btn:active {
+  border-color: #4F28A5;
+  background-color: #4F28A5;
+  color: #fff;
+}
+
+/* playlists */
+.playlists-form__input:active+.playlists-form__input-descr::before {
+  border-color: #6D31EE;
+  border-width: 7px;
+}
+
+.playlists-card__btn:active ~ .playlists-card__content {
+  border-color: #4F28A5;
+  background-color: #4F28A5;
+}
+
+.playlists-card__btn:active .playlists-card__btn-svg {
+  opacity: 1;
+  transform: scale(1.15, 1.15);
+}
+
+.playlists-card__btn:active ~ 
+.playlists-card__content 
+.playlists-card__title {
+  color: #fff;
+}
+
+.playlists-card__btn:active ~ 
+.playlists-card__content 
+.playlists-card__descr {
+  color: #fff;
+}
+
+.playlists-card__btn:active ~ .playlists-card__picture::before {
+  opacity: 0.8;
+}
+
+/* wave */
+.wave__link:active {
+  border-color: #BB973E;
+  background-color: #BB973E;
+}
+
+.wave__link:active .wave__link-svg-path-2 {
+  fill: #BB973E;
+}
+
+/* we */
+.we-slider__btn:active path,
+.we-slider__btn:active circle {
+  stroke: #4F28A5;
+}
+
+/* footer */
+.footer-social-links__link:active path {
+  fill: #4F28A5;
+}

@@ -1,0 +1,197 @@
+/* elements */
+.link:focus {
+  outline: none;
+}
+
+.link-type-1:focus-visible {
+  color: #fff;
+}
+
+.link-type-1:focus-visible::before {
+  background-color: #AA9DFA;
+}
+
+.social-link:focus path {
+  fill: #AA9DFA;
+}
+
+.btn-type-1:focus-visible {
+  outline: none;
+  background-color: #aa9dfa;
+}
+
+.btn-type-2:focus-visible {
+  outline: none;
+  background-color: #AA9DFA;
+  border-color: #4F28A5;
+}
+
+.header-btn-play:focus {
+  outline: none;
+}
+
+.header-btn-play:focus-visible path {
+  fill: #AA9DFA;
+}
+
+/* header */
+.search-form__input:focus-visible {
+  outline: none;
+}
+
+.search-btn:focus-visible path {
+  stroke: #AA9DFA;
+}
+
+.btn-open-broadcasts:focus {
+  outline: none;
+}
+
+.btn-open-broadcasts:focus-visible .btn-open-broadcasts__text {
+
+  color: #aa9dfa;
+}
+
+.btn-open-broadcasts:focus-visible circle {
+  fill: #aa9dfa;
+}
+
+/* podcasts */
+.podcasts-btn-play:focus-visible {
+  outline: none;
+  border-color: #AA9DFA;
+}
+
+.podcasts-btn-play:focus-visible path {
+  fill: #AA9DFA;
+}
+
+.podcasts-btn-play:focus-visible rect {
+  fill: #AA9DFA;
+}
+
+.podcasts-btn:focus-visible {
+  outline: none;
+  background-color: #AA9DFA;
+}
+
+.podcasts-btn:focus-visible path {
+  stroke: #fff;
+}
+
+.podcasts-btn:focus-visible .podcasts-btn__text {
+  color: #fff;
+}
+
+.podcasts__btn-more:focus-visible {
+  outline: none;
+  border-color: #6D31EE;
+  background-color: #AA9DFA;
+  color: #fff;
+}
+
+/* broadcasts */
+.broadcasts-item:focus-within::before {
+  border-color: #6D31EE;
+}
+
+.broadcasts-item__link:focus-visible::before {
+  background-color: #AA9DFA;
+}
+
+/* guests */
+.accordion-item__btn:focus {
+  outline: none;
+  background-color: #292E39;
+}
+
+.accordion-item__item-btn:focus-visible {
+  outline: none;
+  color: #AA9DFA;
+}
+
+.guests-person__btn:focus-visible {
+  border-color: #6D31EE;
+  background-color: #6D31EE;
+  color: #fff;
+}
+
+/* playlists */
+.playlists-form__input:focus-visible+.playlists-form__input-descr::before {
+  border-color: #6D31EE;
+  background-color: #D2D5DD;
+}
+
+@media (max-width: 719px) {
+  .playlists-form__input:focus-visible + 
+   .playlists-form__input-descr {
+    background-color: #6D31EE;
+    color: #fff;
+   }
+}
+
+.playlists-card__btn:focus {
+  outline: none;
+}
+
+.playlists-card__btn:focus-visible 
+.playlists-card__btn-svg {
+  opacity: 1;
+}
+
+.playlists-card__btn:focus-visible ~ 
+.playlists-card__content {
+  border-color: #AA9DFA;
+  background-color: #AA9DFA;
+}
+
+.playlists-card__btn:focus-visible ~ 
+.playlists-card__content 
+.playlists-card__title {
+  color: #121723;
+}
+
+.playlists-card__btn:focus-visible ~ 
+.playlists-card__content 
+.playlists-card__descr {
+  color: #121723;
+}
+
+.playlists-card__btn:focus-visible ~ .playlists-card__picture::before {
+  opacity: 0.8;
+}
+
+/* wave */
+.wave__link:focus-visible {
+  color: #121723;
+  background-color: #BB973E;
+}
+
+/* we */
+.we-slider__btn:focus {
+  outline: none;
+}
+
+.we-slider__btn:focus-visible path,
+.we-slider__btn:focus-visible circle {
+  stroke: #AA9DFA;
+}
+
+.we-form__input-field:focus-visible {
+  outline: none;
+  border-color: #292E39;
+  background-color: #292E39;
+}
+
+.we-form__checkbox:focus-visible+.we-form__checkbox-descr {
+  border-bottom-color: #fff;
+}
+
+/* footer */
+.footer-social-links__link:focus-visible {
+  outline: none;
+}
+
+.footer-social-links__link:focus-visible path {
+  fill: #AA9DFA;
+}

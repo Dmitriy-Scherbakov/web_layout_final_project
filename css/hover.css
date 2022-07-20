@@ -1,0 +1,173 @@
+@media (min-width: 720px) {
+  /* elements */
+  .link-type-1:hover {
+    color: #6D31EE;
+  }
+
+  .social-link:hover path {
+    fill: #6D31EE;
+  }
+
+  .btn-type-1:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: #121723;
+  }
+
+  .btn-type-1:hover path {
+    stroke: #fff;
+  }
+
+  .btn-type-2:hover {
+    cursor: pointer;
+    background-color: #AA9DFA;
+    border-color: #AA9DFA;
+  }
+
+  .header-btn-play:hover path {
+    fill: #6D31EE;
+  }
+
+  /* header */
+ 
+
+  .search-btn:hover path {
+    stroke: #AA9DFA;
+  }
+  
+  .search-btn:hover {
+    cursor: pointer;
+  }
+
+  /* podcasts */
+  .podcasts-item__btn-play:hover {
+    border-color: #6D31EE;
+    cursor: pointer;
+  }
+  
+  .podcasts-item__btn-play:hover .podcasts-btn-play__svg-filler {
+    fill: #6D31EE;
+  }
+
+  .podcasts-btn:hover {
+    cursor: pointer;
+  }
+  
+  .podcasts-btn:hover path {
+    stroke: #6D31EE;
+  }
+  
+  .podcasts-btn:hover .podcasts-btn__text {
+    color: #6D31EE;
+  }
+
+  .podcasts__btn-more:hover {
+    border-color: #6D31EE;
+    background-color: #6D31EE;
+    color: #fff;
+  }
+
+  /* broadcasts */
+  .broadcasts-item__link:hover {
+    color: #6D31EE;
+  }
+  
+  .broadcasts-item__link:hover path {
+    fill: #6D31EE;
+  }
+
+  /* guests */
+  .accordion-item__btn:hover {
+    cursor: pointer;
+  }
+  
+  .accordion-item__btn:hover .accordion-item__btn-name {
+    color: #AA9DFA;
+  }
+  
+  .accordion-item__btn:hover circle {
+    stroke: #AA9DFA;
+  }
+  
+  .accordion-item__btn:hover path {
+    stroke: #AA9DFA;
+  }
+
+  .accordion-item__item-btn:hover {
+    cursor: pointer;
+    color: #6D31EE;
+  }
+
+  .guests-person__btn:hover {
+    border-color: #AA9DFA;
+    background-color: #AA9DFA;
+    color: #fff;
+  }
+
+  /* playlists */
+  .playlists-form__input:hover+.playlists-form__input-descr::before {
+    border-color: #6D31EE;
+  }
+
+  .playlists-card__btn:hover 
+.playlists-card__btn-svg {
+  opacity: 1;
+}
+
+.playlists-card__btn:hover ~ 
+.playlists-card__content {
+  border-color: #6D31EE;
+  background-color: #6D31EE;
+}
+
+.playlists-card__btn:hover ~ 
+.playlists-card__content 
+.playlists-card__title {
+  color: #fff;
+}
+
+.playlists-card__btn:hover ~ 
+.playlists-card__content 
+.playlists-card__descr {
+  color: #fff;
+}
+
+.playlists-card__btn:hover ~ .playlists-card__picture::before {
+  opacity: 0.8;
+}
+
+/* wave */
+.wave__link:hover {
+  color: #121723;
+  background-color: #F0D288;
+}
+
+.wave__link:hover .wave__link-svg-path-1 {
+  fill: #121723;
+}
+
+.wave__link:hover .wave__link-svg-path-2 {
+  fill: #F0D288;
+}
+
+/* we */
+.we-slider__btn:hover path,
+.we-slider__btn:hover circle {
+  stroke: #6d31ee;
+}
+
+
+.we-form__input-field:hover {
+  border-color: #fff;
+  background-color: #292E39;
+}
+
+.we-form__label-checkbox:hover .we-form__checkbox-descr::before {
+  border-color: #AA9DFA;
+}
+
+/* footer */
+  .footer-social-links__link:hover path {
+    fill: #AA9DFA;
+  }
+}
