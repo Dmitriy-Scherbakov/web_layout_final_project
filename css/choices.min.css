@@ -143,7 +143,7 @@
 }
 
 .is-focused .choices__inner, .is-open .choices__inner {
-  border-color: #b7b7b7
+  border-color: #b7b7b7;
 }
 
 .is-open .choices__inner {

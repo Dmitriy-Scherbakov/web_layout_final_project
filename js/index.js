@@ -4,11 +4,21 @@ function activateSearchField() {
   const searchInput = document.querySelector('.search-form__input');
   const headerNav = document.querySelector('.header-top__nav');
 
+
+
   searchBtn.addEventListener('click', (e) => {
     e.preventDefault();
     searchInput.classList.toggle('search-form__input--active');
     searchInput.focus();
     headerNav.classList.toggle('header-top__nav--hidden')
+  });
+
+  window.addEventListener('click', e => {
+    const activatedSearchInput = document.querySelector('.search-form__input.search-form__input--active');
+    if (activatedSearchInput && e.target !== activatedSearchInput && e.target !== searchBtn) {
+      activatedSearchInput.classList.remove('search-form__input--active');
+      headerNav.classList.remove('header-top__nav--hidden')
+    }
   });
 };
 activateSearchField()
@@ -149,13 +159,15 @@ addArialabelToPodcastsBtns()
 
 //broadcasts
 function launchBroadcastsSelect() {
-  const element = document.querySelector('.broadcasts-form__list');
+  const element = document.querySelector('.choices');
   const choices = new Choices(element, {
     position: 'bottom',
     searchEnabled: false,
     shouldSort: false,
     itemSelectText: '',
   });
+
+  document.querySelector('.choices__item--selectable').textContent = "Дмитрий";
 };
 launchBroadcastsSelect()
 
@@ -174,6 +186,7 @@ AddArialabelTobroadcastsLinks();
 //guests
 function activateAccordion() {
   const btns = document.querySelectorAll('.accordion-item__btn');
+
   btns.forEach(btn => {
     btn.addEventListener('click', function () {
       const activatedBtn = document.querySelector('.accordion-item__btn.active');
@@ -182,7 +195,6 @@ function activateAccordion() {
         activatedBtn.nextElementSibling.style.maxHeight = 0;
         activatedBtn.nextElementSibling.classList.remove('active');
       };
-
       this.classList.toggle('active');
 
       const list = this.nextElementSibling;
@@ -209,13 +221,21 @@ function activateAccordion() {
     clearTimeout(timer);
     timer = setTimeout(() => {
       if (activatedBtn) {
-        console.log(activatedBtn.nextElementSibling);
+        const list = activatedBtn.nextElementSibling;
+        const listHeight = Math.max(
+          list.scrollHeight,
+          list.offsetHeight,
+          list.clientHeight,
+        );
         activatedBtn.nextElementSibling.style.maxHeight = 'none';
+        list.style.maxHeight = `${listHeight}px`
       }
     }, 100);
   });
 };
 activateAccordion();
+
+
 
 function LaunchGuestsTabs() {
   const accordionBtnNames = document.querySelectorAll('[data-accordion]');
@@ -237,6 +257,35 @@ function LaunchGuestsTabs() {
   });
 };
 LaunchGuestsTabs()
+
+function openStartingGuest (name) {
+  const accordionGuestBtns = document.querySelectorAll('.accordion-item__item-btn');
+  const guestCards = document.querySelectorAll('.guests-people__item');
+
+  accordionGuestBtns.forEach(guestBtn => {
+    if (guestBtn.textContent === name) {
+      const accordionBtnsWrapper = guestBtn.closest('.accordion-item__list-wrapper');
+      const accordionBtn = accordionBtnsWrapper.previousElementSibling;
+      accordionBtn.classList.add('active');
+      accordionBtnsWrapper.classList.add('active');
+
+      const accordionBtnsWrapperHeight = Math.max(
+        accordionBtnsWrapper.scrollHeight,
+        accordionBtnsWrapper.offsetHeight,
+        accordionBtnsWrapper.clientHeight,
+      );
+
+      accordionBtnsWrapper.style.maxHeight = `${accordionBtnsWrapperHeight}px`;
+
+      guestCards.forEach (card => {
+         if (card.getAttribute('data-people') === guestBtn.getAttribute('data-accordion')) {
+          card.classList.add('active')
+        };
+      });
+    };
+  });
+};
+openStartingGuest ('Ольга Мартынова');
 
 function addArialabelToGuestsAccordionBtns() {
   const btns = document.querySelectorAll('.accordion-item__btn');
@@ -261,9 +310,10 @@ function addArialabelToGuestsCards() {
   });
 };
 addArialabelToGuestsCards();
+
 //playlists
 function actiavatePlaylistsSwiper() {
-  const breakpoint = window.matchMedia('(max-width:719px)');
+  const breakpoint = window.matchMedia('(max-width:767px)');
 
   const swiper = new Swiper('.playlists-swiper', {
     direction: 'horizontal',
@@ -274,7 +324,7 @@ function actiavatePlaylistsSwiper() {
     wrapperClass: 'playlists-form__fieldset',
     slideClass: 'playlists-form__label',
     breakpoints: {
-      719: {
+      767: {
         virtualTranslate: true,
       },
     }
@@ -331,10 +381,10 @@ function launchWeSwiper() {
     grabCursor: true,
     breakpoints: {
       320: {
-        slidesPerView: 5,
-        spaceBetween: 5,
+        slidesPerView: 4,
+        spaceBetween: 20,
       },
-      720: {
+      767: {
         slidesPerView: 2,
         spaceBetween: 30,
       },
@@ -400,7 +450,6 @@ validation
   ]);
 };
 launchValidateWeForm()
-
 
 
 
