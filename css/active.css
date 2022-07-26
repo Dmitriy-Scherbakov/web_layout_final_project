@@ -104,19 +104,20 @@
   background-color: #4F28A5;
 }
 
-.playlists-card__btn:active .playlists-card__btn-svg {
+.playlists-card__btn:active ~
+.playlists-card__picture::after {
   opacity: 1;
-  transform: scale(1.15, 1.15);
+  transform: scale(1.15, 1.15) translate(-44%, -44%);
 }
 
-.playlists-card__btn:active ~ 
-.playlists-card__content 
+.playlists-card__btn:active ~
+.playlists-card__content
 .playlists-card__title {
   color: #fff;
 }
 
-.playlists-card__btn:active ~ 
-.playlists-card__content 
+.playlists-card__btn:active ~
+.playlists-card__content
 .playlists-card__descr {
   color: #fff;
 }

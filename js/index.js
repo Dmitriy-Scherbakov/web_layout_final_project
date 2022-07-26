@@ -166,8 +166,6 @@ function launchBroadcastsSelect() {
     shouldSort: false,
     itemSelectText: '',
   });
-
-  document.querySelector('.choices__item--selectable').textContent = "Дмитрий";
 };
 launchBroadcastsSelect()
 
@@ -241,7 +239,12 @@ function LaunchGuestsTabs() {
   const accordionBtnNames = document.querySelectorAll('[data-accordion]');
   const tabCards = document.querySelectorAll('[data-people]');
   accordionBtnNames.forEach(btn => {
+
     btn.addEventListener('click', () => {
+      const activeBtn = document.querySelector('.accordion-item__item-btn.active');
+      if (activeBtn) activeBtn.classList.remove('active');
+      btn.classList.add('active')
+
       tabCards.forEach(card => {
         const btnName = btn.getAttribute('data-accordion');
         const cardName = card.getAttribute('data-people');
@@ -258,12 +261,15 @@ function LaunchGuestsTabs() {
 };
 LaunchGuestsTabs()
 
-function openStartingGuest (name) {
+function openStartingGuest(name) {
   const accordionGuestBtns = document.querySelectorAll('.accordion-item__item-btn');
   const guestCards = document.querySelectorAll('.guests-people__item');
 
   accordionGuestBtns.forEach(guestBtn => {
+
     if (guestBtn.textContent === name) {
+
+      guestBtn.classList.add('active')
       const accordionBtnsWrapper = guestBtn.closest('.accordion-item__list-wrapper');
       const accordionBtn = accordionBtnsWrapper.previousElementSibling;
       accordionBtn.classList.add('active');
@@ -277,6 +283,7 @@ function openStartingGuest (name) {
 
       accordionBtnsWrapper.style.maxHeight = `${accordionBtnsWrapperHeight}px`;
 
+
       guestCards.forEach (card => {
          if (card.getAttribute('data-people') === guestBtn.getAttribute('data-accordion')) {
           card.classList.add('active')
@@ -285,7 +292,7 @@ function openStartingGuest (name) {
     };
   });
 };
-openStartingGuest ('Ольга Мартынова');
+openStartingGuest('Ольга Мартынова');
 
 function addArialabelToGuestsAccordionBtns() {
   const btns = document.querySelectorAll('.accordion-item__btn');

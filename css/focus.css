@@ -123,7 +123,7 @@
 }
 
 @media (max-width: 719px) {
-  .playlists-form__input:focus-visible + 
+  .playlists-form__input:focus-visible +
    .playlists-form__input-descr {
     background-color: #6D31EE;
     color: #fff;
@@ -134,25 +134,24 @@
   outline: none;
 }
 
-.playlists-card__btn:focus-visible 
-.playlists-card__btn-svg {
+.playlists-card__btn:focus-visible ~ .playlists-card__picture::after {
   opacity: 1;
 }
 
-.playlists-card__btn:focus-visible ~ 
+.playlists-card__btn:focus-visible ~
 .playlists-card__content {
   border-color: #AA9DFA;
   background-color: #AA9DFA;
 }
 
-.playlists-card__btn:focus-visible ~ 
-.playlists-card__content 
+.playlists-card__btn:focus-visible ~
+.playlists-card__content
 .playlists-card__title {
   color: #121723;
 }
 
-.playlists-card__btn:focus-visible ~ 
-.playlists-card__content 
+.playlists-card__btn:focus-visible ~
+.playlists-card__content
 .playlists-card__descr {
   color: #121723;
 }
